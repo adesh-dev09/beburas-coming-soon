@@ -235,28 +235,39 @@ h1 span {
 .email-cta span {
   position: relative;
   z-index: 1;
+  transition: color 220ms ease, text-shadow 220ms ease;
 }
 
 .email-cta:hover,
 .email-cta:focus-visible {
-  border-color: rgba(230, 201, 143, 0.78);
-  color: #fff6df;
-  background-color: rgba(201, 169, 110, 0.095);
+  border-color: rgba(230, 201, 143, 0.92);
+  color: #080e1c;
+  background-color: var(--gold-bright);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 0 46px rgba(201, 169, 110, 0.16);
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -10px 24px rgba(143, 115, 67, 0.18),
+    0 14px 42px rgba(0, 0, 0, 0.28),
+    0 0 34px rgba(201, 169, 110, 0.16);
   transform: translateY(-3px);
+}
+
+.email-cta:hover span,
+.email-cta:focus-visible span {
+  color: #080e1c;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .email-cta:hover::before,
 .email-cta:focus-visible::before {
   opacity: 1;
+  background: rgba(8, 14, 28, 0.62);
   transform: translate(4px, -50%);
 }
 
 .email-cta:hover::after,
 .email-cta:focus-visible::after {
   opacity: 1;
+  background: rgba(8, 14, 28, 0.62);
   transform: translate(-4px, -50%);
 }
 
